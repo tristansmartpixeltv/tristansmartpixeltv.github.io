@@ -19,7 +19,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$( "#transformer_iframe" ).mouseover(  function() {
 			
 			disableScrollingWithJQuery();
-			$("#transformer_iframe").contents().trigger('click');
+			document.getElementById('transformer_iframe').click();
 	
 	 });
 
