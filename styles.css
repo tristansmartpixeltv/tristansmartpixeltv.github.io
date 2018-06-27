@@ -1,5 +1,5 @@
 html {
-    height: 101%;
+    height: 100%;
 	margin:0;
     background-color: #1d292c;
 	 overflow: hidden; margin: 0;
@@ -7,7 +7,7 @@ html {
 }
 body {
     margin: 0;
-    height: 101%;
+    height: 100%;
     background-color: #1d292c;
     font-family: Helvetica, arial, sans-serif;
     position: relative;
