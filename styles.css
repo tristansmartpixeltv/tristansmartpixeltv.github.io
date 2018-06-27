@@ -1,18 +1,26 @@
 html {
-    height: 101%;
+    height: 100%;
     background-color: #1d292c;
-	overflow: hidden; margin: 0;
+	overflow:hidden; margin: 0;
 	-webkit-overflow-scrolling: touch;
+	top: 0;
+	right:0;
+	bottom:0;
+	left: 0;
 }
 body {
     margin: 0;
-    height: 101%;
+    height: 100%;
     background-color: #1d292c;
     font-family: Helvetica, arial, sans-serif;
-    position: relative;
-	overflow: hidden; 
+	overflow:hidden; 
     -webkit-tap-highlight-color: transparent;
 	-webkit-overflow-scrolling: touch;
+	top: 0;
+	right:0;
+	bottom:0;
+	left: 0;
+	
 }
 
 #application-canvas {
@@ -39,3 +47,4 @@ body {
 canvas:focus {
     outline: none;
 }
+
