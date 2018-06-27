@@ -1,28 +1,18 @@
 html {
-    height: 100%;
+    height: 101%;
     background-color: #1d292c;
-	overflow:auto; margin: 0;
+	overflow: hidden; margin: 0;
 	-webkit-overflow-scrolling: touch;
-	position: fixed;
-	top: 0;
-	right:0;
-	bottom:0;
-	left: 0;
 }
 body {
     margin: 0;
-    height: 100%;
+    height: 101%;
     background-color: #1d292c;
     font-family: Helvetica, arial, sans-serif;
-	overflow:auto; 
+    position: relative;
+	overflow: hidden; 
     -webkit-tap-highlight-color: transparent;
 	-webkit-overflow-scrolling: touch;
-	position: fixed;
-	top: 0;
-	right:0;
-	bottom:0;
-	left: 0;
-	
 }
 
 #application-canvas {
