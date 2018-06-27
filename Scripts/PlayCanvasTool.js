@@ -13,7 +13,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 
 	// Apply specific code for firefox (exception)
 	
-	if(isFirefox )
+	if(isFirefox  || isIE )
 	{
 		
 		$( "#transformer_iframe" ).mouseover(  function() {
@@ -24,7 +24,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 });
 
 
-	$( "#transformer_iframe" ).mouseout(  function() {
+	$( "#transformer_iframe" ).mouseleave(  function() {
 		 enableScrollingWithJQuery();
 	 });
 
