@@ -12,7 +12,6 @@ body {
     background-color: #1d292c;
     font-family: Helvetica, arial, sans-serif;
     position: relative;
-    width: 100%;
 	overflow: hidden; margin: 0;
     -webkit-tap-highlight-color: transparent;
 	-webkit-overflow-scrolling: touch;
@@ -35,7 +34,6 @@ body {
     margin: 0;
 }
 #application-canvas.fill-mode-FILL_WINDOW {
-
     height: 100%;
     margin: 0;
 }
