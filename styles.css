@@ -1,7 +1,7 @@
 html {
     height: 100%;
     background-color: #1d292c;
-	 overflow: auto; margin: 0;
+	 overflow: hidden; margin: 0;
 	-webkit-overflow-scrolling: touch;
 }
 body {
@@ -10,7 +10,7 @@ body {
     font-family: Helvetica, arial, sans-serif;
     position: relative;
     width: 100%;
-	overflow: auto; margin: 0;
+	overflow: hidden; margin: 0;
 	-webkit-overflow-scrolling: touch;
     -webkit-tap-highlight-color: transparent;
 }
