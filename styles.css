@@ -1,11 +1,10 @@
 html {
-    height: 101%;
+    height: 100%;
     background-color: #1d292c;
 }
 body {
     margin: 0;
-    max-height: 100%;
-    height: 101%;
+    height: 100%;
     overflow: hidden;
     background-color: #1d292c;
     font-family: Helvetica, arial, sans-serif;
