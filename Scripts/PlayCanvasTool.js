@@ -19,12 +19,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$( "#transformer_iframe" ).mouseover(  function() {
 			
 			disableScrollingWithJQuery();
+			$("#transformer_iframe").focus();
 	
 	 });
 
 
 	$( "#transformer_iframe" ).mouseout(  function() {
 		 enableScrollingWithJQuery();
+		 document.focus();
 	 });
 
 	}
@@ -56,7 +58,7 @@ function disableScrollingWithJQuery(){
             window.scrollTo(0, currentScrollPosition - wheelDelta);
         });
 		
-		
+	
 		
 		
 /*
