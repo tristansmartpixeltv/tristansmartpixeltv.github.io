@@ -13,7 +13,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 
 	// Apply specific code for firefox (exception)
 	
-	
 	if(isFirefox  || isIE )
 	{
 		
@@ -39,6 +38,8 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	
 	}
 
+	
+	
 }
 
 
