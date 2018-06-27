@@ -19,7 +19,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$( "#transformer_iframe" ).mouseover(  function() {
 			
 			disableScrollingWithJQuery();
-			$("#transformer_iframe").focus();
+			$("#transformer_iframe").window.click();
 	
 	 });
 
@@ -57,35 +57,7 @@ function disableScrollingWithJQuery(){
             window.scrollTo(0, currentScrollPosition - wheelDelta);
         });
 		
-	
-		
-		
-/*
-$(window).off('scroll');
 
-var current =  $(window).scrollTop();
-
-
-$(window).scroll(function() {
-
-	if(current < 0){
-		current = 0;
-	}
-	
-	
-	if(	$(window).scrollTop() != current)
-	{
-    $('html, body').stop();
-	$(window).scrollTop(current);
-	}
-	
-
-	
-});
-
-	
-	
-	*/
 }
 
 function enableScrollingWithJQuery(){
