@@ -1,6 +1,8 @@
-function onPlayCanvasload()
+
+
+function onloadPlayCanvas()
 {
-	alert("LOADED");
+	
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  return;
 }	
@@ -14,27 +16,21 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	if(isFirefox  || isIE )
 	{
 		
-		
-	 $(document).on("mousewheel", function (event) {
-            
-			alert(document.parent.name);
-			alert(document.parent.parent.name);
+		$( "#transformer_iframe" ).mouseover(  function() {
 			
-			// remove default behavior
-            event.preventDefault(); 
+			disableScrollingWithJQuery();
+	 });
 
-            //scroll without smoothing
-            var wheelDelta = event.wheelDelta;
-            var currentScrollPosition = window.pageYOffset;
-            window.scrollTo(0, currentScrollPosition - wheelDelta);
-        });
 
+	$( "#transformer_iframe" ).mouseleave(  function() {
+		 //enableScrollingWithJQuery();
+	 });
 
 	}
 	else
 	{
 	// block scrolling on inframe.
-	$("#gameCanvas").on('wheel', function(e){
+	$("#transformer_iframe").contents().on('wheel', function(e){
 	e.preventDefault(); 
 	});
 
@@ -44,6 +40,24 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	
 	
 }
+
+
+function disableScrollingWithJQuery(){
+
+
+   $("#transformer_iframe").contents().on("mousewheel", function (event) {
+            // remove default behavior
+            event.preventDefault(); 
+
+            //scroll without smoothing
+            var wheelDelta = event.wheelDelta;
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
+		
+
+}
+
 
 
 // Librairy to detect if using IE
@@ -75,7 +89,6 @@ function detectIE() {
   return false;
 }
 
-	
-	
-	
-
+function detectSafari(){
+return (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) 
+}
