@@ -15,14 +15,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	{
 		
 		
-	 $("#gameCanvas").on("mousewheel", function (event) {
+	 $(window).on("mousewheel", function (event) {
             // remove default behavior
             event.preventDefault(); 
 
             //scroll without smoothing
             var wheelDelta = event.wheelDelta;
-            var currentScrollPosition = window.parent.pageYOffset;
-            window.parent.scrollTo(0, currentScrollPosition - wheelDelta);
+            var currentScrollPosition = window.parent.parent.pageYOffset;
+            window.parent.parent.scrollTo(0, currentScrollPosition - wheelDelta);
         });
 
 
