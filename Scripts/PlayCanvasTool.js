@@ -1,11 +1,22 @@
 
 
+
+
+
+
 function onloadPlayCanvas()
 {
 	
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  return;
 }	
+	$("#transformer_iframe").load(function() {
+	$(this).css(“visibility”, “hidden”);
+	});
+	
+	$("#transformer_iframe").ready(function() {
+	$(this).css(“visibility”, “visible”);
+	});
 	
 
 	 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;

@@ -1,0 +1,67 @@
+﻿/*! Modernizr 3.0.0-beta (Custom Build) | MIT
+ *  Build: http://modernizr.com/download/#-csstransforms3d-csstransitions-flash-rgba-touchevents-cssclasses-domprefixes-prefixes-testallprops-testprop-teststyles-dontmin
+ */
+(function(n,t,i){function lt(n,t){return!!~(""+n).indexOf(t)}function rt(n){return n.replace(/([A-Z])/g,function(n,t){return"-"+t.toLowerCase()}).replace(/^ms-/,"-ms-")}function ht(n,t){return function(){return n.apply(t,arguments)}}function e(n,t){return typeof n===t}function ot(n,t,i){var u,r;for(r in n)if(n[r]in t)return i===!1?n[r]:(u=t[n[r]],e(u,"function"))?ht(u,i||t):u;return!1}function tt(){var n=t.body;return n||(n=s("body"),n.fake=!0),n}function ut(n,t,i,r){var h="modernizr",c,l,e,a,f=s("div"),u=tt();if(parseInt(i,10))while(i--)e=s("div"),e.id=r?r[i]:h+(i+1),f.appendChild(e);return c=["�",'<style id="s',h,'">',n,"</style>"].join(""),f.id=h,(u.fake?u:f).innerHTML+=c,u.appendChild(f),u.fake&&(u.style.background="",u.style.overflow="hidden",a=o.style.overflow,o.style.overflow="hidden",o.appendChild(u)),l=t(f,n),u.fake?(u.parentNode.removeChild(u),o.style.overflow=a,o.offsetHeight):f.parentNode.removeChild(f),!!l}function st(t,r){var f=t.length,u;if("CSS"in n&&"supports"in n.CSS){while(f--)if(n.CSS.supports(rt(t[f]),r))return!0;return!1}if("CSSSupportsRule"in n){for(u=[];f--;)u.push("("+rt(t[f])+":"+r+")");return u=u.join(" or "),ut("@supports ("+u+") { #modernizr { position: absolute; } }",function(t){return(n.getComputedStyle?getComputedStyle(t,null):t.currentStyle).position=="absolute"})}return i}function k(n,t,r,u){function c(){a&&(delete f.style,delete f.modElem)}var h,a,v,o,l;if(u=e(u,"undefined")?!1:u,!e(r,"undefined")&&(h=st(n,r),!e(h,"undefined")))return h;f.style||(a=!0,f.modElem=s("modernizr"),f.style=f.modElem.style);for(v in n)if(o=n[v],l=f.style[o],!lt(o,"-")&&f.style[o]!==i){if(u||e(r,"undefined"))return c(),t=="pfx"?o:!0;try{f.style[o]=r}catch(y){}if(f.style[o]!=l)return c(),t=="pfx"?o:!0}return c(),!1}function nt(n,t,i,r,u){var f=n.charAt(0).toUpperCase()+n.slice(1),o=(n+" "+l.join(f+" ")+f).split(" ");return e(t,"string")||e(t,"undefined")?k(o,t,r,u):(o=(n+" "+b.join(f+" ")+f).split(" "),ot(o,t,i))}function y(n,t,r){return nt(n,i,i,t,r)}function g(n){var i=o.className,t=r._config.classPrefix||"",u=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");i=i.replace(u,"$1"+t+"js$2"),r._config.enableClasses&&(i+=" "+t+n.join(" "+t),o.className=i)}function et(){var i,t,f,o,u,h,n,s;for(s in c){if(i=[],t=c[s],t.name&&(i.push(t.name.toLowerCase()),t.options&&t.options.aliases&&t.options.aliases.length))for(f=0;f<t.options.aliases.length;f++)i.push(t.options.aliases[f].toLowerCase());for(o=e(t.fn,"function")?t.fn():t.fn,u=0;u<i.length;u++)h=i[u],n=h.split("."),n.length===1?r[n[0]]=o:n.length===2&&(!r[n[0]]||r[n[0]]instanceof Boolean||(r[n[0]]=new Boolean(r[n[0]])),r[n[0]][n[1]]=o),ft.push((o?"":"no-")+n.join("-"))}}function a(n,t){var f,i,u;if(typeof n=="object")for(f in n)w(n,f)&&a(f,n[f]);else{if(n=n.toLowerCase(),i=n.split("."),u=r[i[0]],i.length==2&&(u=u[i[1]]),typeof u!="undefined")return r;t=typeof t=="function"?t():t,i.length==1?r[i[0]]=t:i.length==2&&(!r[i[0]]||r[i[0]]instanceof Boolean||(r[i[0]]=new Boolean(r[i[0]])),r[i[0]][i[1]]=t),g([(t?"":"no-")+i.join("-")]),r._trigger(n,t)}return r}var d="Webkit Moz O ms",ft=[],s=function(){return t.createElement.apply(t,arguments)},o=t.documentElement,c=[],u={_version:"v3.0.0pre",_config:{classPrefix:"",enableClasses:!0,usePrefixes:!0},_q:[],on:function(n,t){setTimeout(function(){t(this[n])},0)},addTest:function(n,t,i){c.push({name:n,fn:t,options:i})},addAsyncTest:function(n){c.push({name:null,fn:n})}},it=u._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):[],b,v,l,r,p,f,ct,w,h;u._prefixes=it,b=u._config.usePrefixes?d.toLowerCase().split(" "):[],u._domPrefixes=b,v=u.testStyles=ut,l=u._config.usePrefixes?d.split(" "):[],u._cssomPrefixes=l,r=function(){},r.prototype=u,r=new r;
+/*!
+    {
+      "name": "CSS rgba",
+      "caniuse": "css3-colors",
+      "property": "rgba",
+      "tags": ["css"],
+      "notes": [{
+        "name": "CSSTricks Tutorial",
+        "href": "http://css-tricks.com/rgba-browser-support/"
+      }]
+    }
+    !*/
+r.addTest("rgba",function(){var t=s("div"),n=t.style;return n.cssText="background-color:rgba(150,255,150,.5)",(""+n.backgroundColor).indexOf("rgba")>-1}),p={elem:s("modernizr")},r._q.push(function(){delete p.elem}),f={style:p.elem.style},r._q.unshift(function(){delete f.style}),ct=u.testProp=function(n,t,r){return k([n],i,t,r)},u.testAllProps=nt,u.testAllProps=y;
+/*!
+    {
+      "name": "CSS Transforms 3D",
+      "property": "csstransforms3d",
+      "caniuse": "transforms3d",
+      "tags": ["css"],
+      "warnings": [
+        "Chrome may occassionally fail this test on some systems; more info: https://code.google.com/p/chromium/issues/detail?id=129004"
+      ]
+    }
+    !*/
+r.addTest("csstransforms3d",function(){var t=!!y("perspective","1px",!0),i=r._config.usePrefixes,n;return t&&(!i||"webkitPerspective"in o.style)&&(n="@media (transform-3d)",i&&(n+=",(-webkit-transform-3d)"),n+="{#modernizr{left:9px;position:absolute;height:5px;margin:0;padding:0;border:0}}",v(n,function(n){t=n.offsetLeft===9&&n.offsetHeight===5})),t});
+/*!
+    {
+      "name": "CSS Transitions",
+      "property": "csstransitions",
+      "caniuse": "css-transitions",
+      "tags": ["css"]
+    }
+    !*/
+r.addTest("csstransitions",y("transition","all",!0));
+/*!
+    {
+      "name": "Touch Events",
+      "property": "touchevents",
+      "caniuse" : "touch",
+      "tags": ["media", "attribute"],
+      "notes": [{
+        "name": "Touch Events spec",
+        "href": "http://www.w3.org/TR/2013/WD-touch-events-20130124/"
+      }],
+      "warnings": [
+        "Indicates if the browser supports the Touch Events spec, and does not necessarily reflect a touchscreen device"
+      ],
+      "knownBugs": [
+        "False-positive on some configurations of Nokia N900",
+        "False-positive on some BlackBerry 6.0 builds � https://github.com/Modernizr/Modernizr/issues/372#issuecomment-3112695"
+      ]
+    }
+    !*/
+r.addTest("touchevents",function(){var i,r;return"ontouchstart"in n||n.DocumentTouch&&t instanceof DocumentTouch?i=!0:(r=["@media (",it.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join(""),v(r,function(n){i=n.offsetTop===9})),i}),function(){var n={}.hasOwnProperty;w=e(n,"undefined")||e(n.call,"undefined")?function(n,t){return t in n&&e(n.constructor.prototype[t],"undefined")}:function(t,i){return n.call(t,i)}}(),u._l={},u.on=function(n,t){this._l[n]||(this._l[n]=[]),this._l[n].push(t),r.hasOwnProperty(n)&&setTimeout(function(){r._trigger(n,r[n])},0)},u._trigger=function(n,t){if(this._l[n]){var i=this._l[n];setTimeout(function(){for(var r,n=0;n<i.length;n++)r=i[n],r(t)},0),delete this._l[n]}},r._q.push(function(){u.addTest=a});
+/*!
+      {
+      "name": "Flash",
+      "property": "flash",
+      "tags": ["flash"],
+      "polyfills": ["shumway"]
+      }
+      !*/
+for(r.addAsyncTest(function(){var r=function(n,t){var r=!!n;r&&(r=new Boolean(r),r.blocked=n==="blocked"),a("flash",function(){return r}),t&&i.removeChild(t)},e,u,t,i,f;try{u="ActiveXObject"in n&&"Pan"in new n.ActiveXObject("ShockwaveFlash.ShockwaveFlash")}catch(h){}if(e=!("plugins"in navigator&&"Shockwave Flash"in navigator.plugins||u),e)r(!1);else{if(t=s("embed"),i=tt(),t.type="application/x-shockwave-flash",i.appendChild(t),!("Pan"in t)&&!u){r("blocked",t);return}setTimeout(function(){o.contains(t)?(f=t.style.cssText,f!==""?r("blocked",t):r(!0,t)):r("blocked"),i.fake&&i.parentNode&&i.parentNode.removeChild(i)},10)}}),et(),g(ft),delete u.addTest,delete u.addAsyncTest,h=0;h<r._q.length;h++)r._q[h]();n.Modernizr=r})(this,document);
