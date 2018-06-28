@@ -17,8 +17,8 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		
 	 $(window).on("mousewheel", function (event) {
             
-			console.log(window.parent.name);
-			console.log(window.parent.parent.name);
+			alert(window.parent.name);
+			alert(window.parent.parent.name);
 			
 			// remove default behavior
             event.preventDefault(); 
