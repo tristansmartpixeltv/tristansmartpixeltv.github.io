@@ -15,18 +15,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	{
 		
 		
-	 $(window).on("mousewheel", function (event) {
+	 $(document).on("mousewheel", function (event) {
             
-			alert(window.parent.name);
-			alert(window.parent.parent.name);
+			alert(document.parent.name);
+			alert(document.parent.parent.name);
 			
 			// remove default behavior
             event.preventDefault(); 
 
             //scroll without smoothing
             var wheelDelta = event.wheelDelta;
-            var currentScrollPosition = window.parent.parent.pageYOffset;
-            window.parent.parent.scrollTo(0, currentScrollPosition - wheelDelta);
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
         });
 
 
