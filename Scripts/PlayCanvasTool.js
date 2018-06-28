@@ -6,7 +6,7 @@ function onloadPlayCanvas()
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  return;
 }	
-	
+	$(window).on('resize', function () { location.reload(); }); 
 
 	 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 	 var isIE = detectIE();
