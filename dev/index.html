@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>ABB Transformer WebGL</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./Scripts/PlayCanvasTool.js"></script>
+    <script src="playcanvas-stable.min.js"></script>
+    <script>
+        ASSET_PREFIX = "";
+        SCRIPT_PREFIX = "";
+        SCENE_PATH = "619283.json";
+        CONTEXT_OPTIONS = {
+            'antialias': true,
+            'alpha': false,
+            'preserveDrawingBuffer': false,
+            'preferWebGl2': true
+        };
+        SCRIPTS = [ 9312945, 9461833, 9461140, 9283093, 9218645, 9218646, 9286001, 9444089, 9461212, 9464235, 9609624, 13124323 ];
+        CONFIG_FILENAME = "config.json";
+        pc.script.legacy = false;
+    </script>
+</head>
+<body id="gameCanvas" onload="onPlayCanvasload()">
+    <script src="start.js"></script>
+    <script src="loading.js"></script>
+	
+</body>
+</html>
