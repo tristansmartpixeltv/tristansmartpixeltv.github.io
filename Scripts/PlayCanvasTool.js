@@ -6,6 +6,9 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
  return;
 }	
 
+	document.getElementById('transformer_iframe').contentWindow.location.reload();
+
+
 	 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 	 var isIE = detectIE();
 	 
