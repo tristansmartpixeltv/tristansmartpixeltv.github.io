@@ -16,7 +16,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		
 		
 	 $(window).on("mousewheel", function (event) {
-            // remove default behavior
+            
+			console.log(window.parent.name);
+			console.log(window.parent.parent.name);
+			
+			// remove default behavior
             event.preventDefault(); 
 
             //scroll without smoothing
