@@ -21,7 +21,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
             //scroll without smoothing
             var wheelDelta = event.wheelDelta;
-            var currentScrollPosition = window.pageYOffset;
+            var currentScrollPosition = window.parent.pageYOffset;
             window.parent.scrollTo(0, currentScrollPosition - wheelDelta);
         });
 
