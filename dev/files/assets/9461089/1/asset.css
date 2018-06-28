@@ -166,7 +166,7 @@ body.spin {
     position: absolute;
     left: 12;
     top: 20px;
-    width: 1.5px;
+    width: 2px;
     height: 32px;
     background-color: rgba(0, 0, 0, 1);
     z-index: -10;
@@ -492,3 +492,41 @@ body.spin {
     }
     
 /*}*/
+
+@media all  and (max-width: 500px)
+{
+    .ar-root 
+    {
+        top: -40px;
+        
+    }
+    
+    .pin-line
+    {
+        left: 12;
+        top: 20px;
+        height: 22px;
+    }
+    
+    .ar-text 
+    {
+        font-size: 0.5em;
+        left: -8px;
+        top: 10px;
+        padding: 0.2em;
+        padding-left: 0.6em;
+        padding-top: 0.0em;
+        
+        .redot 
+        { 
+            position: relative;
+            top: 3px;
+            left: -3px;
+            margin-left: 4px;
+            transform: scale(0.6,0.6);
+          
+        }
+    }
+    
+
+}
