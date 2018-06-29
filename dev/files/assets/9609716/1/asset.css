@@ -113,8 +113,8 @@ button:focus {outline:0;}
     
     .bottomIcon 
     {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
         display: inline;
         text-align: left;
         vertical-align: middle;
@@ -125,7 +125,6 @@ button:focus {outline:0;}
     {
         /*width:40px;*/
         /*height: 40px;*/
-        height: 30px;
     }
     
     #bottomMenu 
