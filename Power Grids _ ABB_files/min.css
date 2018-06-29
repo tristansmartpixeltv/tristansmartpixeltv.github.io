@@ -5,6 +5,34 @@ h1 {
     font-size: 2.2rem;
 }
 
+@media (min-width: 200px) {
+    h1 {
+        font-size: 0.8rem;
+    }
+	
+	.conditionalMarginLeft {
+		margin-left:0px;
+		width:100%
+		float:left;
+	}
+}
+
+
+
+
+@media (min-width: 300px) {
+    h1 {
+        font-size: 0.8rem;
+    }
+	
+	.conditionalMarginLeft {
+		margin-left:0px;
+		width:100%
+		float:left;
+	}
+}
+
+
 @media (min-width: 400px) {
     h1 {
         font-size: 1.3rem;
@@ -19,7 +47,7 @@ h1 {
 
 @media (min-width: 600px) {
     h1 {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 	
 	.conditionalMarginLeft {
@@ -30,7 +58,7 @@ h1 {
 
 @media (min-width: 800px) {
     h1 {
-        font-size: 2.1rem;
+        font-size: 1.9rem;
     }
 	.conditionalMarginLeft {
 		margin-left:15px;
@@ -40,7 +68,7 @@ h1 {
 
 @media (min-width: 1000px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 	.conditionalMarginLeft {
 		margin-left:15px;
