@@ -32,10 +32,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	else
 	{
 	// block scrolling on inframe.
-		$("#transformer_iframe").contents().on('wheel', function(e){
-			debugger;
+		/*$("#transformer_iframe").contents().on('wheel', function(e){
+
 			e.preventDefault(); 
-		});
+		});*/
 
 	
 	}
