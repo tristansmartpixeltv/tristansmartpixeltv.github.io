@@ -34,20 +34,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	else
 	{
 	// block scrolling on inframe.
-		   var s = { insideIframe: false } 
-		   	console.log(211);
-		    $( "#transformer_iframe" ).mouseenter(function() {
-		        s.insideIframe = true;
-		        s.scrollX = w.scrollX;
-		        s.scrollY = w.scrollY;
-		    }).mouseleave(function() {
-		        s.insideIframe = false;
-		    });
+		$("#transformer_iframe").contents().on('wheel', function(e){
+		e.preventDefault(); 
+		});
 
-		    $(document).scroll(function() {
-		        if (s.insideIframe)
-		            w.scrollTo(s.scrollX, s.scrollY);
-		    });
 	
 	}
 
