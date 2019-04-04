@@ -15,7 +15,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 
 	// Apply specific code for firefox (exception)
 	
-	if(isFirefox  || isIE )
+	if(isIE )
 	{
 		
 		$( "#transformer_iframe" ).mouseover(  function() {
@@ -30,11 +30,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 	}
 
-	if(isChrome){
+	if(isFirefox  ||  isChrome){
 		$( "#transformer_iframe" ).mouseover(  function() {
 			$(window.parent.document.body).css("height","100%");
 			$(window.parent.document.body).css("overflow","hidden");
-			
+
 	 	});
 
 
