@@ -9,7 +9,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 	//document.getElementById('transformer_iframe').contentWindow.location.reload();
 
-	 var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+	 var isChrome  = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 	 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 	 var isIE = detectIE();
 	 
