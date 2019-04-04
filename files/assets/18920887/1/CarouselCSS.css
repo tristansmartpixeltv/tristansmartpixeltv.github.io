@@ -280,19 +280,21 @@
         bottom:15vh;
         margin-left:-30px;
         position:fixed;
-        transform:scale(0.7,0.7);
+        transform:scale(0.5,0.5);
         margin-left:0px;
         transition: 0.2s all ease-in-out;
     }
     
     .carousel-button-next {
     
-    margin-top:-100px;
+    margin-top:-50px;
+    font-size:40px;
       
     }
     .carousel-button-prev {
     
-    margin-top:-100px;
+    margin-top:-50px;
+    font-size:40px;
       
     }
     
