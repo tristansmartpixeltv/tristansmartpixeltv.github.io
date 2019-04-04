@@ -33,13 +33,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	}
 	else
 	{
-	// block scrolling on inframe.
+	/*// block scrolling on inframe.
 	$("#transformer_iframe").contents().addEventListener('wheel', function(e){
 		e.preventDefault();
 		e.stopPropagation();
-	});
+	});*/
 
-	
+	disableScrollingWithJQuery();
+	console.log("SCROLLING");
 	}
 
 	
