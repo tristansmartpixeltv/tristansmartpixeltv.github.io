@@ -31,13 +31,13 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	}
 
 	if(isChrome){
-		$( "#transformer_iframe" ).mouseover(  function() {
+		$( "#transformer_iframe" ).contents().on.mouseover(  function() {
 			$(document.body).css("height","100%");
 			$(document.body).css("overflow","hidden");
 	 	});
 
 
-		$( "#transformer_iframe" ).mouseleave(  function() {
+		$( "#transformer_iframe" ).contents().on.mouseleave(  function() {
 		    $(document.body).css("height","");
 			$(document.body).css("overflow","");
 	 	});
