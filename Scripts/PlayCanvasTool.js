@@ -56,8 +56,9 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		    $(window.parent.document.body).css("height","");
 			$(window.parent.document.body).css("overflow","");
 	 	  });
-		  $(document).css("overflow","auto");
-		  $(document.body).css("overflow","auto");
+
+	 	  
+		
 	}
 
 	else
