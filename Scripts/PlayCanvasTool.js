@@ -15,7 +15,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 
 	// Apply specific code for firefox (exception)
 	
-	if(isFirefox  || isIE || isChrome )
+	if(isFirefox  || isIE )
 	{
 		
 		$( "#transformer_iframe" ).mouseover(  function() {
@@ -29,13 +29,27 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 });
 
 	}
+
+	if(isChrome){
+		$( "#transformer_iframe" ).mouseover(  function() {
+			$(document.body).css("height","100%");
+			$(document.body).css("overflow","hidden");
+	 	});
+
+
+		$( "#transformer_iframe" ).mouseleave(  function() {
+		    $(document.body).css("height","");
+			$(document.body).css("overflow","");
+	 	});
+	}
+
 	else
 	{
 	// block scrolling on inframe.
-		/*$("#transformer_iframe").contents().on('wheel', function(e){
+		$("#transformer_iframe").contents().on('wheel', function(e){
 
 			e.preventDefault(); 
-		});*/
+		});
 
 	
 	}
