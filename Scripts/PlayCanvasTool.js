@@ -9,6 +9,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 
 	alert("YO");
+	console.log("YO");
 
 	//document.getElementById('transformer_iframe').contentWindow.location.reload();
 
