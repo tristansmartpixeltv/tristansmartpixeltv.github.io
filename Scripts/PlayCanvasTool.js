@@ -1,14 +1,14 @@
 
 function onloadPlayCanvas()
 {
-	alert("YO");
+
 	
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  return;
 }	
 
 
-
+	alert("YO");
 
 	//document.getElementById('transformer_iframe').contentWindow.location.reload();
 
