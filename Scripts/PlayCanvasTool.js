@@ -35,7 +35,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	{
 	// block scrolling on inframe.
 		   var s = { insideIframe: false } 
-
+		   	console.log(211);
 		    $( "#transformer_iframe" ).mouseenter(function() {
 		        s.insideIframe = true;
 		        s.scrollX = w.scrollX;
