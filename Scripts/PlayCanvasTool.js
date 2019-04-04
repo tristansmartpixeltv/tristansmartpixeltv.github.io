@@ -45,6 +45,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	}
 	if(isFirefox)
 	{
+		  $(window.parent.document.body).css("overflow","");
 		  $( "#transformer_iframe" ).mouseover(  function() {
 			$(window.parent.document.body).css("height","100%");
 			$(window.parent.document.body).css("overflow","hidden");
@@ -57,7 +58,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 			$(window.parent.document.body).css("overflow","");
 	 	  });
 
-	 	  
+
 		
 	}
 
