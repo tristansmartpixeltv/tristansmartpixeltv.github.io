@@ -45,7 +45,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	}
 	if(isFirefox)
 	{
-		
+		  $(window.parent.document).css("overflow","auto");
+		  $(window.parent.document.body).css("overflow","auto");
+		  $(document).css("overflow","auto");
+		  $(document.body).css("overflow","auto");
 	}
 
 	else
