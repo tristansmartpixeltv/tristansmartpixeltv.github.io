@@ -7,19 +7,15 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
  return;
 }	
 
-
-	alert("YO");
-	console.log("YO");
-
 	//document.getElementById('transformer_iframe').contentWindow.location.reload();
 
-
+	 var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 	 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 	 var isIE = detectIE();
 	 
 	// Apply specific code for firefox (exception)
 	
-	if(isFirefox  || isIE )
+	if(isFirefox  || isIE || isChrome )
 	{
 		
 		$( "#transformer_iframe" ).mouseover(  function() {
