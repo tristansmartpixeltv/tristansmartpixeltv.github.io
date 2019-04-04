@@ -19,14 +19,15 @@
 
     var createInputDevices = function (canvas) {
         var devices = {
-            elementInput: new pc.ElementInput(canvas),
-            keyboard: new pc.Keyboard(window),
-            mouse: new pc.Mouse(canvas),
-            gamepads: new pc.GamePads(),
+            elementInput: new pc.ElementInput(canvas, {
+                useMouse: INPUT_SETTINGS.useMouse,
+                useTouch: INPUT_SETTINGS.useTouch
+            }),
+            keyboard: INPUT_SETTINGS.useKeyboard ? new pc.Keyboard(window) : null,
+            mouse: INPUT_SETTINGS.useMouse ? new pc.Mouse(canvas) : null,
+            gamepads: INPUT_SETTINGS.useGamepads ? new pc.GamePads() : null,
+            touch: INPUT_SETTINGS.useTouch && pc.platform.touch ? new pc.TouchDevice(canvas) : null
         };
-        if ('ontouchstart' in window) {
-            devices.touch = new pc.TouchDevice(canvas);
-        }
 
         return devices;
     };
@@ -39,12 +40,12 @@
 
         // css media query for aspect ratio changes
         var css  = "@media screen and (min-aspect-ratio: " + width + "/" + height + ") {";
-            css += "    #application-canvas.fill-mode-KEEP_ASPECT {";
-            css += "        width: auto;";
-            css += "        height: 100%;";
-            css += "        margin: 0 auto;";
-            css += "    }";
-            css += "}";
+        css += "    #application-canvas.fill-mode-KEEP_ASPECT {";
+        css += "        width: auto;";
+        css += "        height: 100%;";
+        css += "        margin: 0 auto;";
+        css += "    }";
+        css += "}";
 
         // append css to style
         if (document.head.querySelector) {
@@ -53,7 +54,7 @@
     };
 
     var reflow = function () {
-        var size = app.resizeCanvas(canvas.width, canvas.height);
+        app.resizeCanvas(canvas.width, canvas.height);
         canvas.style.width = '';
         canvas.style.height = '';
 
@@ -99,7 +100,7 @@
             graphicsDeviceOptions: window.CONTEXT_OPTIONS,
             assetPrefix: window.ASSET_PREFIX || "",
             scriptPrefix: window.SCRIPT_PREFIX || "",
-            scriptsOrder: window.SCRIPTS || [ ]
+            scriptsOrder: window.SCRIPTS || []
         });
     } catch (e) {
         if (e instanceof pc.UnsupportedBrowserError) {
