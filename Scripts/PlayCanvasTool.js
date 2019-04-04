@@ -33,7 +33,8 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	{
 	// block scrolling on inframe.
 		$("#transformer_iframe").contents().on('wheel', function(e){
-		e.preventDefault(); 
+			debugger;
+			e.preventDefault(); 
 		});
 
 	
