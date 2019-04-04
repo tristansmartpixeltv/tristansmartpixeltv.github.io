@@ -45,8 +45,17 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	}
 	if(isFirefox)
 	{
-		  $(window.parent.document).css("overflow","auto");
-		  $(window.parent.document.body).css("overflow","auto");
+		  $( "#transformer_iframe" ).mouseover(  function() {
+			$(window.parent.document.body).css("height","100%");
+			$(window.parent.document.body).css("overflow","hidden");
+
+	 	  });
+
+
+		  $( "#transformer_iframe" ).mouseleave(  function() {
+		    $(window.parent.document.body).css("height","");
+			$(window.parent.document.body).css("overflow","");
+	 	  });
 		  $(document).css("overflow","auto");
 		  $(document.body).css("overflow","auto");
 	}
