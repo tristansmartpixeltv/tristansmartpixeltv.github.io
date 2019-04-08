@@ -21,7 +21,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$("#transformer_iframe").contents().on("wheel", function (event) {
 	            // remove default behavior
 	            
-	           event.stopPropagation();
+	            event.preventDefault();
 	        }, { passive: false } );
 	}
 	else if(isFirefox  || isIE )
