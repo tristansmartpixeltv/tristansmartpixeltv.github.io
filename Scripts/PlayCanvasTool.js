@@ -18,9 +18,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 
 	if(isChrome){
+		alert('im chrome');
 		$("#transformer_iframe").contents().on("wheel", function (event) {
 	            // remove default behavior
-	            
+
 	            event.preventDefault();
 	        }, { passive: false } );
 	}
