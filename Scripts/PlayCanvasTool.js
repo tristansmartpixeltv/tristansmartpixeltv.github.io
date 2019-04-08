@@ -18,15 +18,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 
 	if(isChrome){
-		$( "#transformer_iframe" ).mouseover(  function() {
-			$(window.parent.document.body).css({ "height" : ($(window).height() - 1) + 'px', "overflow": "auto" });
-	 	});
-
-
-		$( "#transformer_iframe" ).mouseleave(  function() {
-		    $(window.parent.document.body).css("height","");
-			$(window.parent.document.body).css("overflow","");
-	 	});
+		$("#transformer_iframe").contents().on("wheel", function (event) {
+	            // remove default behavior
+	            
+	           event.stopPropagation();
+	        }, { passive: false } );
 	}
 	else if(isFirefox  || isIE )
 	{
