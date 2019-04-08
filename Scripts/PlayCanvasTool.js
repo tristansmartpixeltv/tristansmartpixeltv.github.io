@@ -19,10 +19,9 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 	if(isChrome){
 		alert('im chrome');
-		$("#transformer_iframe").contents().on("wheel", function (event) {
+		$("#transformer_iframe").contents().on("mousewheel", function (e) {
 	            // remove default behavior
-
-	            event.preventDefault();
+	            e.preventDefault();
 	        }, { passive: false } );
 	}
 	else if(isFirefox  || isIE )
