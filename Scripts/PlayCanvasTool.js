@@ -32,16 +32,15 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 	if(isChrome){
 		$( "#transformer_iframe" ).mouseover(  function() {
-			$(window.parent.document.body).css("height","100%");
-			$(window.parent.document.body).css("overflow","hidden");
+			
+			disableScrollingWithJQuery();
+	 });
 
-	 	});
 
+	$( "#transformer_iframe" ).mouseleave(  function() {
+		 //enableScrollingWithJQuery();
+	 });
 
-		$( "#transformer_iframe" ).mouseleave(  function() {
-		    $(window.parent.document.body).css("height","");
-			$(window.parent.document.body).css("overflow","");
-	 	});
 	}
 	else if(isFirefox  || isIE )
 	{
