@@ -20,7 +20,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	if(isChrome){
 		$("#transformer_iframe").contents().on("wheel", function (event) {
 	            // remove default behavior
-	            event.preventDefault();
+	            event.stopPropagation();
 	        }, { passive: false } );
 
 
