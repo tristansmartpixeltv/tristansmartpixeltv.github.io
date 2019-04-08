@@ -18,12 +18,24 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 
 	if(isChrome){
-		$("#transformer_iframe").contents().on("wheel", function (event) {
+		$( "#transformer_iframe" ).mouseover(  function() {
+			$(window.parent.document.body).css("position","fixed");
+			$(window.parent.document.body).css("overflowY","scroll");
+
+	 	});
+
+
+		$( "#transformer_iframe" ).mouseleave(  function() {
+		    $(window.parent.document.body).css("position","");
+			$(window.parent.document.body).css("overflowY","auto");
+	 	});
+
+
+
+		/*$("#transformer_iframe").contents().on("wheel", function (event) {
 	            // remove default behavior
-	            event.stopPropagation();
-	        }, { passive: false } );
-
-
+	            event.preventDefault();
+	        }, { passive: false } );*/
 	}
 	else if(isFirefox  || isIE )
 	{
