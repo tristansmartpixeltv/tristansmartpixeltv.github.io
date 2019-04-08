@@ -19,23 +19,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 	if(isChrome){
 		$( "#transformer_iframe" ).mouseover(  function() {
-			$(window.parent.document.body).css("position","fixed");
-			$(window.parent.document.body).css("overflowY","scroll");
-
+			$(window.parent.document.body).css({ "height" : ($(window).height() - 1) + 'px', "overflow": "hidden" });
 	 	});
 
 
 		$( "#transformer_iframe" ).mouseleave(  function() {
-		    $(window.parent.document.body).css("position","");
-			$(window.parent.document.body).css("overflowY","auto");
+		    $(window.parent.document.body).css("height","");
+			$(window.parent.document.body).css("overflow","");
 	 	});
-
-
-
-		/*$("#transformer_iframe").contents().on("wheel", function (event) {
-	            // remove default behavior
-	            event.preventDefault();
-	        }, { passive: false } );*/
 	}
 	else if(isFirefox  || isIE )
 	{
