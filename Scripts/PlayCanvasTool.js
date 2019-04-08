@@ -19,7 +19,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 	if(isChrome){
 		$( "#transformer_iframe" ).mouseover(  function() {
-			$(window.parent.document.body).css({ "height" : ($(window).height() + 1) + 'px', "overflow": "auto" });
+			$(window.parent.document.body).css({ "height" : ($(window).height() - 1) + 'px', "overflow": "auto" });
 	 	});
 
 
