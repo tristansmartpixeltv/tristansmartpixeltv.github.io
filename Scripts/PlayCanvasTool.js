@@ -20,7 +20,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$("#transformer_iframe").contents().on("mousewheel", function (event) {
 	            // remove default behavior
 	            event.preventDefault();
-	        });
+	        }, {passive: true} );
 
 
 	}
