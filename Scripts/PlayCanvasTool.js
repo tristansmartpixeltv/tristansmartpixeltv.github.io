@@ -43,34 +43,26 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 			$(window.parent.document.body).css("overflow","");
 	 	});
 	}
-	if(isFirefox)
+	else if(isFirefox  || isIE )
 	{
-		  $(window.parent.document.body).css("overflow","");
-		  $( "#transformer_iframe" ).mouseover(  function() {
-			$(window.parent.document.body).css("height","100%");
-			$(window.parent.document.body).css("overflow","hidden");
-
-	 	  });
-
-
-		  $( "#transformer_iframe" ).mouseleave(  function() {
-		    $(window.parent.document.body).css("height","");
-			$(window.parent.document.body).css("overflow","");
-	 	  });
-
-
 		
-	}
+	$( "#transformer_iframe" ).mouseover(  function() {
+			
+			disableScrollingWithJQuery();
+	 });
 
+
+	$( "#transformer_iframe" ).mouseleave(  function() {
+		 //enableScrollingWithJQuery();
+	 });
+
+	}
 	else
 	{
-	// block scrolling on inframe.
+		// block scrolling on inframe.
 		$("#transformer_iframe").contents().on('wheel', function(e){
-
-			e.preventDefault(); 
+		e.preventDefault(); 
 		});
-
-	
 	}
 
 	
