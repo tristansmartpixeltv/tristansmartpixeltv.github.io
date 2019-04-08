@@ -14,32 +14,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 var isIE = detectIE();
 	 
 	// Apply specific code for firefox (exception)
-	
-	if(isIE )
-	{
-		
-		$( "#transformer_iframe" ).mouseover(  function() {
-			
-			disableScrollingWithJQuery();
-	 });
 
-
-	$( "#transformer_iframe" ).mouseleave(  function() {
-		 //enableScrollingWithJQuery();
-	 });
-
-	}
 
 	if(isChrome){
-		$( "#transformer_iframe" ).mouseover(  function() {
-			
-			disableScrollingWithJQuery();
-	 });
+		$("#transformer_iframe").contents().on("mousewheel", function (event) {
+	            // remove default behavior
+	            event.preventDefault();
+	        });
 
-
-	$( "#transformer_iframe" ).mouseleave(  function() {
-		 //enableScrollingWithJQuery();
-	 });
 
 	}
 	else if(isFirefox  || isIE )
@@ -50,10 +32,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 			disableScrollingWithJQuery();
 	 });
 
-
-	$( "#transformer_iframe" ).mouseleave(  function() {
-		 //enableScrollingWithJQuery();
-	 });
 
 	}
 	else
