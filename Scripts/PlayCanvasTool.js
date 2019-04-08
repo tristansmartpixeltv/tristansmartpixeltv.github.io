@@ -12,6 +12,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	 var isChrome  = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 	 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 	 var isIE = detectIE();
+	 var transformer = $("#transformer_iframe");
 	 
 	// Apply specific code for firefox (exception)
 
@@ -20,7 +21,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$("#transformer_iframe").contents().on("wheel", function (event) {
 	            // remove default behavior
 	            event.preventDefault();
-	        }, false );
+	        }, { passive: false } );
 
 
 	}
